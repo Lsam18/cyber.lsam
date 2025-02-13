@@ -1,8 +1,8 @@
-Cybersecurity Research & Development
+## Cybersecurity Research & Development
 
 Welcome to my repository dedicated to Cybersecurity Research & Development. This collection includes various projects such as penetration testing scripts, forensic analysis tools, and security automation scripts. It serves as a repository of hands-on experiments, research findings, and practical implementations related to network security, exploit development, and threat detection.
 
-🔹 Key Areas Covered:
+## Key Areas Covered:
 Penetration Testing & Exploit Research
 Explore tools and scripts developed for security assessments, vulnerability scanning, and exploit research.
 Digital Forensics & Incident Response
