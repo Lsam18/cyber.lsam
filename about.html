@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Portfolio website for Lakshan Sameer, a freelance cybersecurity engineer ">
+    <meta name="author" content="Elliot Alderson">
+    <meta name="keywords" content="elliot, alderson, cybersecurity, cyber, security, engineer, freelance, freelancer, analyst, consultation, 
+        design, development, project, projects, mr, robot, hacker, hackers, hacking, hack, hacktivist, hacktivists, allsafe, ecorp, fsociety, dark, 
+        army, ddos, social, anxiety, depression, drugs, paranoia, delusion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshan Sameera — Cybersecurity Undergraduate</title>
+    <link href="assets/images/LOGO.png" rel="shortcut icon" type="image/png">
+    <style>
+      body {
+       background-image: url("https://st.depositphotos.com/1380903/51896/v/450/depositphotos_518965062-stock-illustration-black-abstract-background-composed-squares.jpg");
+        color: #e0e0e0;
+        font-family: 'Courier New', monospace;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .matrix-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+                    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><text x="0" y="10" fill="rgba(0, 255, 0, 0.1)" font-size="10">10110101010101010101</text></svg>');
+        z-index: -1;
+      }
+
+      .navbar-container {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 0;
+        border-bottom: 1px solid #01422f;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .logo img {
+        width: 90px;
+        height: auto;
+        
+      }
+
+      .menu ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .menu a {
+        color: #008665;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s ease;
+      }
+
+      .menu a:hover {
+        color: #65ff4d;
+      }
+
+      .menu a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: #3cff00;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .menu a:hover::before {
+        transform: scaleX(1);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #00ff1a;
+        text-shadow: 0 0 10px rgba(38, 255, 0, 0.5);
+      }
+
+      .about-text {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border: 1px solid #333;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(98, 255, 0, 0.1);
+      }
+
+      #personal-image-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        border-radius: 5%;
+        
+      }
+
+      #personal-image {
+        border: 2px solid #333;
+        box-shadow: 0 0 15px rgba(38, 255, 0, 0.2);
+        filter: grayscale(50%) contrast(120%) brightness(90%);
+        
+      }
+      #personal-image2 {
+    
+    filter: grayscale(50%) contrast(120%) brightness(90%);
+  }
+      
+
+      #final-test {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      #password, .submit-buttons {
+        background-color: #1a1a1a;
+        color: #00ff04;
+        border: 1px solid #333;
+        padding: 10px;
+        margin: 5px;
+      }
+
+      .submit-buttons {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .submit-buttons:hover {
+        background-color: #00fff7;
+        color: #000;
+      }
+
+      
+
+      .glitch-effect {
+        animation: glitch 0.3s infinite;
+        display: inline-block;
+      }
+
+      a {
+        color: #71ff4d;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #009dff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+
+        #personal-image-container {
+        
+        gap: 50px;
+        overflow-x: hidden;
+      }
+
+     #personal-image {
+    width: 80%; /* Set width to 80% */
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    margin-right: 300px;
+    gap: 50px;
+    filter: grayscale(50%) contrast(120%) brightness(90%);
+  }
+  #personal-image2 {
+    width: 80%; /* Set width to 80% */
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    margin-left: -40px;
+    
+  }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="matrix-bg"></div>
+    <header>
+      
+      <div class="navbar-container">
+        <nav class="navbar">
+          <div class="logo">
+            <picture>
+              <img src="assets/images/LOGO.png" alt="Mr. Robot logo">
+            </picture>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="index.html" aria-label="Go to the top of the page" rel="next">Home</a></li>
+             
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header> <br><br>
+    <center> <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-cc0edbd6-abc0-43ca-8d59-775fc03af6e3" data-elfsight-app-lazy></div></center>
+    <!-- About -->
+    <section id="about-section" class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2><span class="glitch-effect">About Me</span></h2>
+          <Center><p>Get to know me!! :)</p></Center>
+        </div>
+      </div>
+      <section>
+        <div id="personal-image-container">
+          <img id="personal-image2" src="assets/images/LS.jpeg" style="width: 300px;" alt="Your Image">
+        <center><img id="personal-image" src="assets/images/lsamm.jpg" style="width: 265px;"  alt="Your Image"></center>  
+        </div>
+        <div>
+          <p class="about-text" style="text-align: justify;">
+            <a href="https://www.linkedin.com/in/lsam/" target="_blank" aria-label="Mr. Robot's Wikipedia page (opens in a new 
+                              tab)" rel="external">Hi, I’m Sameer!</a> I’m a Final Year Cybersecurity student at NSBM Green University <a href="https://www.plymouth.ac.uk">(University of Plymouth partner)</a>, graduating in 2025.  My work revolves around securing systems, detecting threats, and solving cybersecurity challenges. I’ve gained hands-on experience during my internship at <a href="https://www.mitesp.com">MillenniumIT ESP</a>, where I worked on SIEM optimization (Azure Sentinel, FortiSIEM), log analysis, and advanced data querying with KQL. Beyond offensive security and penetration testing, I’ve also explored digital forensics—analyzing email metadata, investigating network traffic, and uncovering IoCs using tools like Autopsy and Wireshark. Whether it’s offensive or defensive, I love diving deep into the details to make digital infrastructures more secure.
+
+                              I’m an active contributor to the <a href="https://www.linkedin.com/company/fossnsbm/mycompany/">FOSS Community</a> and a member of the <a href="https://www.linkedin.com/company/nsbm-islamic-society/mycompany/"> NSBM Islamic Society</a>, always looking for ways to collaborate, grow, and give back. I’m all about continuous learning, staying ahead of threats, and tackling real-world security issues. Let’s connect to explore ideas and secure the tech landscape together!
+
+                              
+          </p>
+          
+          <p class="about-text" > Furthermore, I complemented by certifications including SSCP (Coursera), highlights my dedication to continuous learning and specialization in the field. I expertise in web development, C# .NET Framework, digital forensics, and dark web operations equips myself with a diverse skill set essential for tackling multifaceted cybersecurity threats. </p>
+          <p class="about-text"> As I aspire to roles such as CTO, CIO, or CISO, My vision of integrating technological advancement with humanitarian impact underscores my broader perspective on the role of cybersecurity in shaping a safer, more ethical digital environment. </p>
+          <p class="about-text">Pursuing internships to further apply my knowledge signifies my proactive approach towards gaining practical experience and making meaningful contributions to organizations' cybersecurity initiatives...</p>
+          <p class="about-text" style="color: #07ab18;">Alright!! Now, the final test: Here's a small challenge for ya! Crack the password! G Luck! :) <br>
+            <br> NOTE**: Support Our Mission I am dedicated to providing high-quality Cyber Security / Tech guides, resources, notes, and more, all for free. Your support can help keep this content accessible to everyone. If you find my resources helpful and would like to see more, please consider making a donation. Every contribution, no matter how small, helps me continue to deliver valuable content and improve the quality of the resources available. Thank you for your support!
+          </p>
+         <center> <p style="color: #00fffb;">Pssst!! Did you Figure it out!!? </p> </center>
+          <div id="final-test">
+            <input type="password" id="password" class="final-test-font">
+            <input type="submit" value="Submit" class="submit-buttons" id="sendTest">
+          </div>
+        </div> 
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              // Function to validate password and redirect
+              function isValid() {
+                  let password = document.getElementById("password").value;
+                  if (password === "jellybean") {
+                      window.location.href = "congrats-2.html";
+                  } else {
+                      alert("Oops! Goodbye, friend.");
+                  }
+              }
+  
+              // Attach event listener to the Submit button
+              document.getElementById("sendTest").addEventListener("click", function(event) {
+                  event.preventDefault(); // Prevent the default form submission
+                  isValid(); // Call the validation function
+              });
+          });
+      </script> <br>
+        
+      <Center> <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-731d65d1-6f95-46b8-8277-fb22c169754f" data-elfsight-app-lazy></div></Center> <br>
+<center><p>Copyright &copy; 2024 LSAM28</p></center> <br>
+      </section>
+    </section>
+    <script>
+      // Function to remove the watermark elements
+      function removeWatermark() {
+        var watermarkLinks = document.querySelectorAll('a[href*="https://elfsight.com/rss-feed-widget"], a[href*="https://elfsight.com/social-media-feed-widget"]');
+        watermarkLinks.forEach(function(link) {
+          link.style.display = 'none';
+        });
+        var watermarkSvgs = document.querySelectorAll('svg path[d*="M14.98.15c7.035.248 12.559"]');
+        watermarkSvgs.forEach(function(svg) {
+          svg.parentElement.parentElement.style.display = 'none';
+        });
+      }
+      // Initial call to remove the watermark
+      removeWatermark();
+      // Set an interval to remove the watermark every 2 seconds
+      setInterval(removeWatermark, 2000);
+
+      // Add glitch effect to headings
+      document.querySelectorAll('h2').forEach(heading => {
+        heading.innerHTML = `<span class="glitch-effect">${heading.textContent}</span>`;
+      });
+    </script>
+
+   
+    <footer>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        
+        <div class="copyright-notice">
+         
+        </div>
+        </div>
+        </div>
+      </footer>
+     
+      <!-- To load the EmailJS library  -->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+        (function() {
+          emailjs.init('RklM6TETmzGI8Nb-y');
+        })();
+      </script>
+      <!-- Link to the JavaScript file -->
+      <script src="assets/js/script.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+          if (disclaimer) {
+            disclaimer.remove();
+          }
+        });
+      </script>
+      <script>
+        document.getElementById('download-resume').addEventListener('click', function() {
+          // Replace 'your_resume_url' with the URL of your resume on Google Drive
+          var resumeUrl = 'https://medium.com/@lakshan.sam28';
+          // Open the resume URL in a new tab to trigger the download
+          window.open(resumeUrl, '_blank');
+        });
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          function removeWatermark() {
+            var elfsightLinks = document.querySelectorAll('a[href*="elfsight.com/rss-feed-widget"], a[href*="elfsight.com/"]');
+            elfsightLinks.forEach(function(link) {
+              link.style.display = 'none'; // or any other style manipulation to hide the element
+            });
+          }
+          // Call the function to remove watermark on page load
+          removeWatermark();
+          // Retry removing the watermark on window resize (for responsiveness)
+          window.addEventListener('resize', removeWatermark);
+        });
+      </script>
+      <style>
+        @media (max-width: 768px) {
+  
+          /* Adjust max-width as per your mobile viewport breakpoint */
+          a[href*="elfsight.com/rss-feed-widget"],
+          a[href*="elfsight.com/"] {
+            display: none !important;
+            /* Ensure the !important to override any inline styles */
+          }
+        }
+      </style>
+      <script>
+        function loadWidget() {
+          var script = document.createElement('script');
+          script.src = 'https://static.elfsight.com/platform/platform.js';
+          script.setAttribute('data-use-service-core', '');
+          script.setAttribute('defer', '');
+          document.body.appendChild(script);
+        }
+        // Call loadWidget() when needed, e.g., on page load or user interaction
+        window.onload = function() {
+          loadWidget();
+        };
+      </script>
+      <script>
+        // Replace with the actual script content of the widget if you manage to fetch it
+        var cachedWidgetScript = `...`;
+        // Function to inject cached script into the page
+        function loadCachedWidget() {
+          var script = document.createElement('script');
+          script.textContent = cachedWidgetScript;
+          document.body.appendChild(script);
+        }
+        // Call loadCachedWidget() when needed
+        window.onload = function() {
+          loadCachedWidget();
+        };
+      </script>
+      <script>
+        // Check if widget's view count is stored in localStorage and manipulate if possible
+        if (localStorage.getItem('widgetViewCount')) {
+          localStorage.setItem('widgetViewCount', '199'); // Adjust the count below the limit
+        }
+        // Load the widget normally
+        var script = document.createElement('script');
+        script.src = 'https://static.elfsight.com/platform/platform.js';
+        script.setAttribute('data-use-service-core', '');
+        script.setAttribute('defer', '');
+        document.body.appendChild(script);
+      </script>
+      <script>
+        
+      </script>
+  </body>
+</html>

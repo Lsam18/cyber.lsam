@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="assets/CSS/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5420f5b85a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Portfolio website for Lakshan Sameer, a freelance cybersecurity engineer ">
+    <meta name="author" content="Elliot Alderson">
+    <meta name="keywords" content="elliot, alderson, cybersecurity, cyber, security, engineer, freelance, freelancer, analyst, consultation, 
+        design, development, project, projects, mr, robot, hacker, hackers, hacking, hack, hacktivist, hacktivists, allsafe, ecorp, fsociety, dark, 
+        army, ddos, social, anxiety, depression, drugs, paranoia, delusion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshan Sameera — Cybersecurity Undergraduate</title>
+    <link href="assets/images/LOGO.png" rel="shortcut icon" type="image/png">
+  </head>
+  <body>
+    <header>
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-9442b63c-cdc4-4dc7-842b-f5bb862ba660" data-elfsight-app-lazy></div>
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-6b5e9add-25f4-445e-a55b-527659aa2520" data-elfsight-app-lazy></div>
+      <div class="navbar-container">
+        <nav class="navbar">
+          <div class="logo">
+            <picture>
+              <img src="assets/images/LOGO.png" alt="Mr. Robot logo">
+            </picture>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#home-image-and-text" aria-label="Go to the top of the page" rel="next">Home</a></li>
+              <li><a href="#education-section" aria-label="Go to the Education section" rel="next">Education</a></li>
+              <li><a href="#experience-heading" aria-label="Go to the Experience section" rel="next">Experience</a></li>
+              <li><a href="#Badges" aria-label="Go to the About section" rel="next">Badges</a></li>
+              <li><a href="#skills" aria-label="Go to the Skills section" rel="next">Skills</a></li>
+              <li><a href="#projects-section" aria-label="Go to the Projects section" rel="next">Projects</a></li>
+              <li><a href="#Contact" aria-label="Go to the Contact section" rel="next">Contact</a></li>
+              <li><a href="#about-section" aria-label="Go to the About section" rel="next">About</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <style>
+      html {
+        scroll-behavior: auto; /* Disable default smooth scrolling */
+      }
+    
+      /* Navbar link style with security scan effect */
+      .navbar a {
+        color: #ffffff; /* Bright green for a cybersecurity feel */
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        font-weight: bold;
+      }
+    
+      .navbar a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(3, 209, 30, 0.3);
+        transform: skewX(-30deg);
+        animation: scan 2s infinite;
+        z-index: 1;
+      }
+    
+      .navbar a:hover::after {
+        animation: scanHover 1s infinite;
+      }
+    
+      .navbar a {
+        position: relative;
+        z-index: 2;
+      }
+    
+      @keyframes scan {
+        0% {
+          left: -100%;
+        }
+        50% {
+          left: 100%;
+        }
+        100% {
+          left: -100%;
+        }
+      }
+    
+      @keyframes scanHover {
+        0% {
+          left: -100%;
+        }
+        50% {
+          left: 0;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      .submit-buttons {
+  background-color: rgb(0, 255, 64);
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+      .submit-buttons:hover {
+        background-color: #53f800;
+        color: #4a4a4a;
+        padding: 10px 10px;
+      }
+
+      
+
+      .glitch-effect {
+        animation: glitch 0.3s infinite;
+        display: inline-block;
+      }
+
+      a {
+        color: #010201;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      
+    </style>
+    
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            const target = document.querySelector(this.getAttribute('href'));
+            const offsetTop = target.getBoundingClientRect().top + window.scrollY;
+    
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+    
+            setTimeout(() => {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 1000); // Slower scroll speed
+        });
+      });
+    </script>
+    
+    <main>
+      <!-- Home -->
+     
+      <section id="home-image-and-text">
+        
+        <div id="cybersecurity-quiz-container">
+          
+          <div id="cybersecurity-quiz">
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-cc0edbd6-abc0-43ca-8d59-775fc03af6e3" data-elfsight-app-lazy></div>
+            
+            <h2 style="margin-top: -30px;">Did You Know?</h2> <br>
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2473242" 
+        style="border: 3px solid #53f800; border-radius: 10px; height: 86px;"></iframe> <br> <br>
+
+            <p>Every 39 seconds, a hacker attack happens on average.</p>
+          </div>
+          <div id="cybersecurity-news">
+            <h3>Trending News</h3>
+            <a id="news-link" href="https://www.securityweek.com" target="_blank">
+              <img id="news-image" src="assets/images/news-placeholder.jpg" alt="Trending Cybersecurity News">
+              <p id="news-caption">Loading...</p>
+            </a>
+          </div>
+          <div id="personal-image-container">
+            <img id="personal-image" src="assets/images/Lsam-new.jpeg" style="filter: grayscale(30%) contrast(120%) brightness(90%);" alt="Your Image">
+           
+            <br>
+            <br>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-76c75531-9a8c-4be9-b96a-2eec4b5a6f4f" data-elfsight-app-lazy></div>
+          </div> <br>
+          
+        </div>
+        <div id="home-text">
+          <h1 id="home-main-text-1">Lakshan Sameera</h1>
+          <h1 id="home-main-text-2">Cybersecurity Undergraduate</h1>
+          <h1>Hey There! <br> I am a Final-Year Computer Security Undergraduate at University of Plymouth <br></h1> <br>
+          <h1> Explore my projects and journey in securing digital assets. </h1>
+          <br>
+          <center>
+            
+            <button id="download-resume" class="button">Read My Blog</button>
+          </center>
+          <br>
+          <center>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-a180c9e1-193f-4155-8ee1-446260754f2d" data-elfsight-app-lazy></div>
+          </center>
+          <a class="menu" style="cursor: pointer;" href="https://medium.com/@lakshan.sam28">
+            <h1>Recent Projects</h1>
+          </a>
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-43feda4d-a918-41a5-a0d4-b6874522e9cf" data-elfsight-app-lazy></div>
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+        </div>
+      </section>
+      <script>
+        // Function to remove the watermark elements
+        function removeWatermark() {
+          var watermarkLinks = document.querySelectorAll('a[href*="https://elfsight.com/rss-feed-widget"], a[href*="https://elfsight.com/social-media-feed-widget"]');
+          watermarkLinks.forEach(function(link) {
+            link.style.display = 'none';
+          });
+          var watermarkSvgs = document.querySelectorAll('svg path[d*="M14.98.15c7.035.248 12.559"]');
+          watermarkSvgs.forEach(function(svg) {
+            svg.parentElement.parentElement.style.display = 'none';
+          });
+        }
+        // Initial call to remove the watermark
+        removeWatermark();
+        // Set an interval to remove the watermark every 2 seconds
+        setInterval(removeWatermark, 2000);
+      </script>
+      <!-- Education -->
+      <section id="education-section" class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Education & Certifications</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="table table-education-experience-contact">
+              <tbody>
+                <tr>
+                  <td>2008-2021</td>
+                  <td>Leeds International School - IGCSE Ordinary Level, International Advanced Subsdiary Level, International Advanced Level - London Syllabus</td>
+                </tr>
+                <tr>
+                  <td>2022-Present</td>
+                  <td>Bachelor's Degree - Plymouth University UK</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>(ISC)2 Systems Security Certified Practitioner (SSCP) offered by ISC2</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>IBM Cybersecurity Analyst Professional Certificate</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>Security Analyst Fundamentals Certificate</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>Ethical Hacking Essentials (EHE)</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>Google Cybersecurity Professional Certificate</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>Security Blue Team Junior Analyst (Training Pathway)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <br>
+          <br>
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-2a95f03c-ad45-4c5d-bf2f-bae143d4f3af" data-elfsight-app-lazy></div>
+        </div>
+      </section>
+      <!-- Experience -->
+      <section id="education-section" class="container">
+        <div class="experience-container">
+          <h2 id="experience-heading">Experience</h2>
+          <div class="timeline">
+      
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <span class="timeline-date">June 2022 - Present</span>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Member - FOSS Community of NSBM</h3>
+                <p>The Member-FOSS Community of NSBM is a dynamic group that embraces Free and Open Source Software (FOSS). They’ve organized hackathons, honed skills in Git and C programming, and fostered innovative problem-solving with their Techie Sleuths initiative.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <span class="timeline-date">June 2024 - Nov 2024</span>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Internship - Cyber Security Engineer - MillenniumIT ESP</h3>
+                <p>As an Intern Cyber Security Engineer at MillenniumIT ESP, I contributed to securing enterprise environments by creating custom analytical rules for scenarios with no logs and deploying Data Collection Rules (DCRs) to enhance data ingestion. I was actively involved in Security Operations Center (SOC) implementations, using Azure Sentinel and FortiSIEM for real-time threat detection and analysis. My role included analyzing Windows Event Logs, integrating secure systems, and focusing on secure communication, configuration, and remediation to bolster the organization's security posture. Additionally, I leveraged Kusto Query Language (KQL) for advanced threat identification and mitigation.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <span class="timeline-date">February 2025 - Present</span>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Cyber Threat Intelligence Analyst - NOVAIZE</h3>
+                <p>Contributing to the development of an AI-driven threat detection engine, I assist in designing and testing security solutions to identify and mitigate cyber threats in real time. This role provides hands-on experience in cybersecurity research, AI integration, and security operations within an innovative startup environment.</p>
+                <p>Working alongside industry professionals, I gain exposure to real-world security challenges, enhancing my skills in threat analysis, network defense, and automation. This experience strengthens my expertise in AI-powered cybersecurity solutions and reinforces my ability to adapt to emerging threats.</p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+<br><br><br>
+<!-- Badges -->
+<section id="Badges" class="container">
+  
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-066634cc-4112-48b3-a07d-c4759c76e0fc" data-elfsight-app-lazy></div>
+</section>
+
+
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="container">
+          <ul>
+            <li>C</li>
+            <li>Java</li>
+            <li>C#.NET</li>
+            <li>Digital forensics</li>
+            <li>KQL (Kusto Query Language</li>
+            <li>SIEM (Security Information and Event Management)</li>
+            <li>Web/Software development</li>
+            <li>Kali Linux</li>
+            <li>Metasploit and social engineering</li>
+            <li>Cryptography</li>
+            <li>Computer Networks</li>
+            <li>Testing and scans to predict vulnerabilities and weak spots</li>
+            <li>Designing, managing, and enhancing security protocols to safeguard organizational infrastructure, data, and networks. Tasks include overseeing firewall configurations and implementing diverse endpoint security solutions.</li>
+            <li>Evaluating the organization’s security needs and establishing best practices and standards accordingly</li>
+            <li>Detecting and responding to security incidents and breaches to the network and associated systems by applying computer forensics techniques</li>
+            <li>Troubleshooting network and security issues</li>
+            <li>Assisting in security breach investigations</li>
+            <li>Taking an active role in change management</li>
+            <li>Creating comprehensive security reports to document findings, incidents, and recommendations</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Projects -->
+      <section id="projects-section" class="container">
+        <section id="education-section" class="container"
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-3b64fcb8-5eed-4ad0-ba82-6994edaaa967" data-elfsight-app-lazy></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-347483c8-c245-4d42-be99-2ca3c1072491" data-elfsight-app-lazy></div>
+      </section>
+      <br><br><br><br>
+      <h2>Contact Me</h2>
+      <br><br>
+      <script>
+        // Function to remove the watermark elements
+        function removeWatermark() {
+          var watermarkLinks = document.querySelectorAll('a[href*="https://elfsight.com/rss-feed-widget"], a[href*="https://elfsight.com/social-media-feed-widget"]');
+          watermarkLinks.forEach(function(link) {
+            link.style.display = 'none';
+          });
+          var watermarkSvgs = document.querySelectorAll('svg path[d*="M14.98.15c7.035.248 12.559"]');
+          watermarkSvgs.forEach(function(svg) {
+            svg.parentElement.parentElement.style.display = 'none';
+          });
+        }
+        // Initial call to remove the watermark
+        removeWatermark();
+        // Set an interval to remove the watermark every 2 seconds
+        setInterval(removeWatermark, 2000);
+      </script>
+      <!-- Contact -->
+      <section id="Contact">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-a8e218b8-39d3-4afd-b3ff-4ff3e396f456" data-elfsight-app-lazy></div>
+      </section>
+      <!-- About -->
+      <section id="about-section" class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>About Me</h2>
+            <p>Get to know me!! :)</p> <br> 
+            <a href="about.html" class="submit-buttons" style="text-decoration: none;" id="sendTest">-----------></a>
+          </div>
+        </div>
+       
+      </section>
+      <!-- Final Test -->
+    </main>
+    <!-- Footer -->
+    <footer>
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-af06115a-e506-4727-a952-c3dd3b1da280" data-elfsight-app-lazy></div>
+      <div class="copyright-notice">
+        <p style="color: rgb(0, 255, 26);">Copyright &copy; 2024 LSAM28</p>
+      </div>
+      </div>
+      </div>
+    </footer>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-aaf95f9b-d3ad-4c95-ba66-c993f402cf81" data-elfsight-app-lazy></div>
+    <!-- To load the EmailJS library  -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init('RklM6TETmzGI8Nb-y');
+      })();
+    </script>
+    <!-- Link to the JavaScript file -->
+    <script src="assets/js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+        if (disclaimer) {
+          disclaimer.remove();
+        }
+      });
+    </script>
+    <script>
+      document.getElementById('download-resume').addEventListener('click', function() {
+        // Replace 'your_resume_url' with the URL of your resume on Google Drive
+        var resumeUrl = 'https://medium.com/@lakshan.sam28';
+        // Open the resume URL in a new tab to trigger the download
+        window.open(resumeUrl, '_blank');
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        function removeWatermark() {
+          var elfsightLinks = document.querySelectorAll('a[href*="elfsight.com/rss-feed-widget"], a[href*="elfsight.com/"]');
+          elfsightLinks.forEach(function(link) {
+            link.style.display = 'none'; // or any other style manipulation to hide the element
+          });
+        }
+        // Call the function to remove watermark on page load
+        removeWatermark();
+        // Retry removing the watermark on window resize (for responsiveness)
+        window.addEventListener('resize', removeWatermark);
+      });
+    </script>
+    <style>
+      @media (max-width: 768px) {
+
+        /* Adjust max-width as per your mobile viewport breakpoint */
+        a[href*="elfsight.com/rss-feed-widget"],
+        a[href*="elfsight.com/"] {
+          display: none !important;
+          /* Ensure the !important to override any inline styles */
+        }
+      }
+    </style>
+    <script>
+      function loadWidget() {
+        var script = document.createElement('script');
+        script.src = 'https://static.elfsight.com/platform/platform.js';
+        script.setAttribute('data-use-service-core', '');
+        script.setAttribute('defer', '');
+        document.body.appendChild(script);
+      }
+      // Call loadWidget() when needed, e.g., on page load or user interaction
+      window.onload = function() {
+        loadWidget();
+      };
+    </script>
+    <script>
+      // Replace with the actual script content of the widget if you manage to fetch it
+      var cachedWidgetScript = `...`;
+      // Function to inject cached script into the page
+      function loadCachedWidget() {
+        var script = document.createElement('script');
+        script.textContent = cachedWidgetScript;
+        document.body.appendChild(script);
+      }
+      // Call loadCachedWidget() when needed
+      window.onload = function() {
+        loadCachedWidget();
+      };
+    </script>
+    <script>
+      // Check if widget's view count is stored in localStorage and manipulate if possible
+      if (localStorage.getItem('widgetViewCount')) {
+        localStorage.setItem('widgetViewCount', '199'); // Adjust the count below the limit
+      }
+      // Load the widget normally
+      var script = document.createElement('script');
+      script.src = 'https://static.elfsight.com/platform/platform.js';
+      script.setAttribute('data-use-service-core', '');
+      script.setAttribute('defer', '');
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

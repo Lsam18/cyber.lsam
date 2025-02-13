@@ -1,0 +1,1747 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Fira Code", sans-serif;
+    font-weight: 500;
+    color: #FFFFFF
+}
+
+a {
+  font-weight: bold;
+  color: rgb(0, 255, 26);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid rgb(43, 255, 0);
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 175%;
+  justify-content: center;
+  display: flex;
+  padding-top: 55px;
+}
+
+.table-education-experience-contact {
+  font-size: 125%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Navigation */
+
+.logo {
+  padding-top: 3px;
+  padding-left: 10px;
+}
+
+.navbar-container {
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
+.navbar {
+  background-color: #000000;
+  padding-right: 10px;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* General style for #download-resume */
+#download-resume {
+    background-color: rgb(226, 0, 0);
+    border: none;
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    outline: none; /* Remove outline */
+    margin-left: auto; /* Move to the right side */
+}
+
+/* Media query for desktop screens */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* Adjusted style for desktop screens */
+  #download-resume {
+    margin-left: auto; /* Align to the right */
+    margin-right: 20px; /* Add some margin to the right */
+  }
+}
+
+/* Hover effect */
+#download-resume:hover {
+    background-color: rgb(144, 11, 71);
+    transform: scale(1.01); /* Scale effect on hover */
+}
+
+
+
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  background-color: #000000;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.menu li {
+  color: rgb(13, 255, 0);
+  background-color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+/* Home */
+
+h1 {
+  font-size: 185%;
+  text-align: center;
+  margin-top: 45px;
+}
+
+#home-image-and-text {
+  display: flex;
+}
+
+#elliot-image {
+  height: 642px;
+  width: 601px;
+  padding-top: 53px;
+}
+
+#home-text {
+  padding-top: 53px;
+  color: white;
+}
+
+#home-main-text-1 {
+  font-size: 350%;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 85px;
+}
+
+#home-main-text-2 {
+  font-style: italic;
+  letter-spacing: 4px;
+  margin-top: 0;
+}
+
+#home-paragraph-text {
+  font-size: 140%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#dark-mode-toggle-switch { /* Partial sources: Florin Pop & Paulina Surazynska */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* Dark mode toggle switch => Partial sources: Florin Pop & Paulina Surazynska */
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.slider-container {
+  height: 17px;
+  width: 30px;
+  border-radius: 50px;
+  background-color: red;
+  display: flex;
+  transform: scale(1.5);
+}
+
+.slider {
+  width: 12px;
+  height: 12px;
+  background-color: #000000;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .slider-container .slider {
+  transform: translateX(14px);
+}
+
+/* Dark mode */
+
+body.dark-mode {
+  background-color: #000000;
+  color: #FFFFFF; opacity: 0.87;
+}
+
+/* Skills */
+
+#skills-list {
+  font-size: 125%;
+  letter-spacing: 1px;
+  line-height: 2em;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  margin-right: 175px;
+  margin-left: 175px;
+}
+
+/* Projects */
+
+#projects-table {
+  font-size: 125%;
+  letter-spacing: 1px;
+  line-height: 2em;
+  text-align: justify;
+  margin-right: 175px;
+  margin-left: 175px;
+}
+
+/* Contact form */
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 175%;
+  display: flex;
+  justify-content: center;
+}
+
+#contact-details {
+  letter-spacing: 1px;
+  line-height: 2em;
+}
+
+#contact-form {
+  font-size: 125%;
+  letter-spacing: 1px;
+  line-height: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-font {
+  font-size: 125%;
+}
+
+.submit-buttons {
+  background-color: white;
+  font-family: "Fira Code", sans-serif;
+  font-size: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-style: solid;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+button:hover {
+  transform: scale(1.01);
+}
+
+/* Contact form confirmation message */
+
+#contact-form-confirmation-message {
+  background-color: #000000;
+  color: red;
+  margin-top: 200px;
+  margin-right: 350px;
+  margin-left: 350px;
+  padding-bottom: 4px;
+}
+
+/* About */
+
+.about-text {
+  text-align: justify;
+  margin-right: 175px;
+  margin-left: 175px;
+  font-size: 125%;
+  letter-spacing: 1px;
+  line-height: 2em;
+}
+
+/* Final test */
+
+#final-test {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 75px;
+}
+
+.final-test-font {
+  font-size: 125%;
+  margin-right: 8px;
+}
+
+input:hover {
+  transform: scale(1.01);
+}
+
+/* Footer */
+
+.footer-container {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer {
+  background-color: #000000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.social-media-icons ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.social-media-icons li {
+  font-size: 20px;
+  margin-left: 160px;
+}
+
+.copyright-notice {
+  font-weight: bold;
+  color: red;
+  margin-right: 7px;
+  padding: 2px;
+}
+
+/* MEDIA QUERIES */
+
+/* Media queries for extra large screens and TVs */
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  #elliot-image {
+    height: 555px;
+    width: 523px;
+  }
+  
+  #home-main-text-1 {
+    font-size: 250%;
+    margin-top: 50px;
+    margin-right: 25px;
+  }
+
+  #home-main-text-2 {
+    margin-right: 25px;
+  }
+  
+  #home-paragraph-text {
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 140%;
+    margin-right: 25px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 250px;
+    margin-left: 250px;
+    padding-left: 20px;
+  }
+}
+
+/* Media queries for desktops and large screens */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .menu li {
+    margin-right: 0;
+    margin-left: 0;  
+  }
+
+  #elliot-image {
+    height: 555px;
+    width: 507px;
+  }
+
+  #home-main-text-1 {
+    font-size: 200%;
+    margin-top: 65px;
+    margin-right: 25px;
+  }
+
+  #home-main-text-2 {
+    font-size: 150%;
+    margin-right: 35px;
+  }
+
+  h1 {
+    font-size: 140%;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 95px;
+  }
+
+  #skills-list {
+    font-size: 125%;
+  }
+
+  #projects-table {
+    font-size: 125%;
+    margin-right: 175px;
+    margin-left: 175px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 190px;
+    margin-left: 190px;
+    padding-left: 10px;
+  }
+
+  .about-text {
+    font-size: 125%;
+  }
+
+  .social-media-icons li {
+    margin-left: 100px;
+  }
+}
+
+/* Media queries for laptops and small screens */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding-right: 0px;
+  }
+
+  .logo {
+    padding-top: 9px;
+    padding-left: 5px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu li {
+    margin-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 22px;
+  }
+
+  #elliot-image {
+    height: 475px;
+    width: 400px;
+    padding-top: 66px;
+  }
+
+  #home-main-text-1 {
+    font-size: 175%;
+    margin-top: 50px;
+    margin-right: 15px;
+  }
+
+  #home-main-text-2 {
+    font-size: 125%;
+    margin-right: 15px;
+  }
+
+  h1 {
+    font-size: 125%;
+    margin-top: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #home-paragraph-text {
+    font-size: 90%;
+    margin-top: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  h2 {
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 125%;
+    margin-right: 50px;
+    margin-left: 80px;
+  }
+
+  #skills-list {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+
+  #projects-table {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+
+  h3 {
+    font-size: 150%;
+  }
+
+  #contact-form {
+    font-size: 100%;
+  }
+  
+  .contact-form-font {
+    font-size: 125%;
+  }
+
+  .submit-buttons {
+    font-size: 100%;
+  }
+
+  #contact-form-confirmation-message {
+    margin-top: 225px;
+    margin-right: 90px;
+    margin-left: 90px;
+    padding-left: 5px;
+  }
+
+  .about-text {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+
+  .social-media-icons li {
+    margin-left: 70px;
+  }
+}
+
+/* Media queries for tablets and iPads */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;  
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .menu li {
+    font-size: 13px;
+    margin-right: 0px;
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 7px;
+    padding-right: 0; 
+  }
+
+  #home-image-and-text {
+    display: inline-block;
+    text-align: center;
+  }
+
+  #elliot-image {
+    height: 275px;
+    width: 250px;
+    padding-top: 77px;
+  }
+
+  #home-text {
+    padding-top: 0;
+  }
+
+  #home-main-text-1 {
+    font-size: 175%;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 125%;
+    margin-top: 23px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #home-paragraph-text {
+    font-size: 90%;
+    margin-top: 21px;
+  }
+  
+  h2 {
+    font-size: 150%;
+    padding-top: 75px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  #skills-list {
+    font-size: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  #projects-table {
+    font-size: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  h3 {
+    font-size: 100%;
+  }
+
+  #contact-form {
+    font-size: 77%;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  .contact-form-font {
+    font-size: 134%;
+  }
+
+  .submit-buttons {
+    font-size: 100%;
+  }
+
+  #contact-form-confirmation-message {
+    margin-top: 225px;
+    margin-right: 90px;
+    margin-left: 90px;
+    padding-left: 5px;
+  }
+
+  .about-text {
+    font-size: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .final-test-font {
+    font-size: 100%;
+  }
+
+  .social-media-icons li {
+    margin-left: 25px;
+  }
+
+  .copyright-notice {
+    font-size: 13px;
+    padding: 5px;
+  }
+}
+
+/* Media queries for mobile devices */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  .menu li {
+    font-size: 13px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  #home-image-and-text {
+    display: inline-block;
+    text-align: center;
+  }
+
+  #elliot-image {
+    height: 275px;
+    width: 250px;
+    padding-top: 107px;
+  }
+
+  #home-text {
+    padding-top: 0;
+  }
+
+  #home-main-text-1 {
+    font-size: 135%;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 100%;
+    margin-top: 17px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  #home-paragraph-text {
+    font-size: 90%;
+    margin-top: 14px;
+  }
+
+  h2 {
+    font-size: 125%;
+    padding-top: 105px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #table-experience {
+    font-size: 85%;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  #skills-list {
+    font-size: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #projects-table {
+    font-size: 91%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  h3 {
+    font-size: 100%;
+    text-align: center;
+  }
+
+  #contact-details {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+
+  #contact-form {
+    font-size: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  
+  .contact-form-font {
+    font-size: 80%;
+  }
+
+  .submit-buttons {
+    font-size: 77%;
+
+  }
+
+  #contact-form-confirmation-message {
+    margin-top: 200px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-left: 5px;
+  }
+
+  #menu-contact-form-confirmation-message {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-text {
+    font-size: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .final-test-font {
+    font-size: 100%;
+  }
+
+  .social-media-icons li {
+    font-size: 15px;
+    margin-left: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .copyright-notice {
+    font-size: 9px;
+    padding: 6px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Fira Code", sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+a {
+  font-weight: bold;
+  color: rgb(30, 255, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid rgb(0, 255, 38);
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 175%;
+  justify-content: center;
+  display: flex;
+  padding-top: 55px;
+}
+
+.table-education-experience-contact {
+  font-size: 125%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Container Styling */
+#home-image-and-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-image: url("https://w0.peakpx.com/wallpaper/677/889/HD-wallpaper-black-stylish-background-green-neon-lines-green-light-effects-abstract-black-background-thumbnail.jpg");
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(245, 7, 7, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 90px;
+    
+}
+
+/* Quiz and News Container Styling */
+#cybersecurity-quiz-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    max-width: 900px;
+   
+}
+
+#cybersecurity-quiz,
+#cybersecurity-news {
+    background-color: #000000;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    
+    
+}
+
+/* Text Styling */
+#home-text {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+}
+
+#home-main-text-1,
+#home-main-text-2,
+#home-text h1:nth-of-type(3),
+#home-text h1:nth-of-type(4) {
+  border: 2px solid rgb(2, 55, 3); /* Red border */
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px; /* Padding inside the container */
+  margin: 0; /* Reset margin for all elements */
+}
+
+#home-text {
+  display: inline-block; /* Wraps the content tightly */
+  max-width: 100%; /* Ensures the container doesn't overflow on small screens */
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #home-main-text-1,
+  #home-main-text-2,
+  #home-text h1:nth-of-type(3),
+  #home-text h1:nth-of-type(4) {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 8px; /* Slightly reduce padding for mobile */
+  }
+
+  #home-text {
+    width: 100%; /* Make the container take full width on mobile */
+    text-align: center; /* Center-align text for better readability */
+  }
+}
+
+
+
+#home-main-text-1,
+#home-main-text-2 {
+    font-family: 'Fira Code', sans-serif;
+    color: #ff0000;
+    margin: 10px 0;
+}
+
+#home-main-text-1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#home-main-text-2 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+#home-text h1 {
+    font-family: 'Fira Code', sans-serif;
+    color: #15ff00;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.button {
+    background-color: #025107;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #124403;
+}
+
+/* Centering the button */
+#download-resume {
+    display: inline-block;
+    background-color: #3c3c3c;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #0bb925;
+}
+#download-resume:hover{
+  background-color: #10bb00;
+  color: white;
+}
+
+/* News Section Styling */
+#cybersecurity-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#cybersecurity-news a {
+    text-decoration: none;
+    color: #33ccff;
+}
+
+#cybersecurity-news p {
+    margin: 10px 0 0 0;
+    font-family: 'Fira Code', sans-serif;
+    color: #11a882;
+}
+
+/* Dark mode toggle switch */
+#dark-mode-toggle-switch {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.slider-container {
+    height: 17px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: red;
+    display: flex;
+    transform: scale(1.5);
+}
+
+.slider {
+    width: 12px;
+    height: 12px;
+    background-color: #820202;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .slider-container .slider {
+    transform: translateX(14px);
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #000000;
+    color: #FFFFFF; opacity: 0.87;
+}
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.footer {
+    background-color: #000000;
+    justify-content: space-between;
+    display: flex;
+}
+
+.social-media-icons ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.social-media-icons li {
+    font-size: 20px;
+    margin-left: 160px;
+}
+
+.copyright-notice {
+    font-weight: bold;
+    color: red;
+    margin-right: 7px;
+    padding: 2px;
+}
+
+/* MEDIA QUERIES */
+
+/* Media queries for extra large screens and TVs */
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  #elliot-image {
+    height: 555px;
+    width: 523px;
+  }
+  
+  #home-main-text-1 {
+    font-size: 250%;
+    margin-top: 50px;
+    margin-right: 25px;
+  }
+
+  #home-main-text-2 {
+    margin-right: 25px;
+  }
+  
+  #home-paragraph-text {
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 140%;
+    margin-right: 25px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 250px;
+    margin-left: 250px;
+    padding-left: 20px;
+  }
+}
+
+/* Media queries for desktops and large screens */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .menu li {
+    margin-right: 0;
+    margin-left: 0;  
+  }
+
+  #elliot-image {
+    height: 555px;
+    width: 507px;
+  }
+
+  #home-main-text-1 {
+    font-size: 200%;
+    margin-top: 65px;
+    margin-right: 25px;
+  }
+
+  #home-main-text-2 {
+    font-size: 150%;
+    margin-right: 35px;
+  }
+
+  h1 {
+    font-size: 140%;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 95px;
+  }
+
+  #skills-list {
+    font-size: 125%;
+  }
+
+  #projects-table {
+    font-size: 125%;
+    margin-right: 175px;
+    margin-left: 175px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 190px;
+    margin-left: 190px;
+    padding-left: 10px;
+  }
+
+  .about-text {
+    font-size: 125%;
+  }
+
+  .social-media-icons li {
+    margin-left: 100px;
+  }
+}
+
+/* Media queries for laptops and small screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding-right: 0px;
+  }
+
+  #elliot-image {
+    height: 555px;
+    width: 507px;
+  }
+
+  #home-main-text-1 {
+    font-size: 200%;
+    margin-top: 65px;
+    margin-right: 25px;
+  }
+
+  #home-main-text-2 {
+    font-size: 150%;
+    margin-right: 35px;
+  }
+
+  h1 {
+    font-size: 140%;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 95px;
+  }
+
+  #skills-list {
+    font-size: 125%;
+  }
+
+  #projects-table {
+    font-size: 125%;
+    margin-right: 175px;
+    margin-left: 175px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 190px;
+    margin-left: 190px;
+    padding-left: 10px;
+  }
+
+  .about-text {
+    font-size: 125%;
+  }
+
+  .social-media-icons li {
+    margin-left: 100px;
+  }
+}
+
+/* Media queries for tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #elliot-image {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  #home-main-text-1 {
+    font-size: 200%;
+    margin-top: 25px;
+    margin-right: 0px;
+  }
+
+  #home-main-text-2 {
+    font-size: 150%;
+    margin-right: 0px;
+  }
+
+  h1 {
+    font-size: 125%;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 125%;
+  }
+
+  #skills-list {
+    font-size: 125%;
+  }
+
+  #projects-table {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .about-text {
+    font-size: 125%;
+  }
+
+  .social-media-icons li {
+    margin-left: 50px;
+  }
+
+  /* Adjust iframe width for tablets */
+  iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Media queries for mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-right: 0px;
+  }
+
+  #elliot-image {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  #personal-image{
+    height: 250px;
+    width: 300px;
+    margin-bottom: 20px;
+    filter: grayscale(50%) contrast(120%) brightness(90%);
+  }
+
+  #home-image-and-text {
+    display: inline-block;
+    text-align: center;
+    
+  }
+
+  #home-main-text-1 {
+    font-size: 200%;
+    margin-top: 25px;
+    margin-right: 0px;
+  }
+
+  #home-main-text-2 {
+    font-size: 150%;
+    margin-right: 0px;
+  }
+
+  h1 {
+    font-size: 125%;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .table-education-experience-contact {
+    font-size: 125%;
+  }
+
+  #skills-list {
+    font-size: 125%;
+  }
+
+  #projects-table {
+    font-size: 125%;
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+
+  #contact-form-confirmation-message {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .about-text {
+    font-size: 125%;
+  }
+
+  .social-media-icons li {
+    margin-left: 30px;
+  }
+
+   #cybersecurity-quiz-container {
+    max-width: 100%;
+  }
+
+  #cybersecurity-news {
+    max-width: 100%;
+    
+  }
+
+  #home-image-and-text{
+      max-width: 100%
+       
+  }
+
+   /* Adjust iframe width for mobile */
+  .iframe1 {
+    width: 300px;
+    height: 200px; /* Adjust height as needed */
+    margin: 0 auto;
+    display: block;
+    
+  }
+  .iframe2 {
+    width: 300px;
+    height: 200px; /* Adjust height as needed */
+    margin: 0 auto;
+    display: block;
+    
+  }
+  
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.news-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.news-item p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+#news-container img {
+  border: 5px solid rgb(0, 255, 34);
+  border-radius: 10px;
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
+
+
+#image-box {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #027e06;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#personal-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #026321;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#cybersecurity-news{
+  border: 2px solid #0a5203;
+  border-radius: 8px;
+}
+
+#cybersecurity-quiz{
+  border: 2px solid #215f02;
+  border-radius: 8px;
+  
+}
+
+.iframe1{
+  border: 2px solid #c60707;
+  border-radius: 8px;
+}
+
+.iframe2{
+  border: 2px solid #046d2b;
+  border-radius: 8px;
+}
+
+
+/* Container styles */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles for Skills Section */
+#skills-section {
+  background-color: #f8f9fa;
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+}
+
+#skills-section h2 {
+  font-size: 36px;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-list li {
+  margin: 0 20px;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+/* Styles for About Section */
+#about-section {
+  background-color: #000000;
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+}
+
+#about-section h2 {
+  font-size: 36px;
+  color: #a4acb3;
+  margin-bottom: 30px;
+}
+
+#about-section p {
+  font-size: 16px;
+  color: #a4acb3;
+  line-height: 1.6;
+}
+
+
+
+
+.table {
+  font-size: 16px; /* Adjust font size as needed */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.table-bordered {
+  border: 2px solid #01420a;
+  border-radius: 8px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #500101;
+}
+
+#projects-section {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(245, 7, 7, 0.1);
+  margin-top: 90px;
+}
+
+#projects-section h2 {
+  font-size: 28px; /* Adjust font size as needed */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+      font-size: 12px; /* Adjust font size for smaller screens */
+  }
+  
+  #projects-section {
+      padding: 10px;
+      margin-top: 40px;
+  }
+  #experience-heading{
+    overflow-x:hidden;
+    
+  }
+}
+
+/*education*/
+.table {
+  font-size: 16px; /* Adjust font size as needed */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.table-education-experience-contact {
+  border: 2px solid #027c31;
+  border-radius: 8px;
+  background-color: #000000;
+}
+
+.table-education-experience-contact td {
+  padding: 10px;
+}
+
+#education-section {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(7, 245, 201, 0.1);
+  margin-top: 40px;
+  background: url("https://w0.peakpx.com/wallpaper/677/889/HD-wallpaper-black-stylish-background-green-neon-lines-green-light-effects-abstract-black-background-thumbnail.jpg");
+}
+
+#education-section h2 {
+  font-size: 28px; /* Adjust font size as needed */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  
+  #education-section {
+      padding: 10px;
+      margin-top: 60px;
+      
+  }
+
+  
+}
+
+#contact-form{
+  font-size: 16px;
+}
+
+#table-experience{
+  font-size: 13px;
+}
+
+/* Experience Container */
+.experience-container {
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 50px 0;
+  list-style: none;
+  margin-top: 20px ;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 20px;
+  top: -35px;
+  background: rgb(255, 255, 255);
+  color: #000000;
+  padding: 1px;
+  border-radius: 5%;
+  border: 2px solid #000;
+}
+
+.timeline-date {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.timeline-content {
+  padding-left: 60px;
+  padding-right: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.timeline-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: rgb(49, 167, 13);
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .timeline-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 50px; /* Adjust this to align the content properly on smaller screens */
+  }
+
+  .timeline-icon {
+    left: 5px; /* Move the icon closer on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 30px; /* Further adjust for very small screens */
+  }
+
+  .timeline-icon {
+    left: 2px; /* Move the icon even closer on very small screens */
+  }
+
+  .timeline-date, .timeline-title {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+
+  .timeline-content p {
+    font-size: 12px; /* Reduce paragraph font size for smaller screens */
+  }
+}
+

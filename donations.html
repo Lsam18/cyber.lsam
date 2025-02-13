@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Successful</title>
+    <link href="assets/CSS/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5420f5b85a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="assets/images/LOGO.png" rel="shortcut icon" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+        body {
+            font-family: "Fira Code", sans-serif;
+            text-align: center;
+            background-color: #000000;
+            color: #ff0000;
+            padding: 50px;
+            
+        }
+        .container {
+            margin-top: 150px;
+            background: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            font-family: "Fira Code", sans-serif;
+        }
+        .button {
+            background-color: #c50000;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/images/LOGO.png" alt="logo" width="200px">
+        <h1>Thank You!</h1>
+        <p>Your donation was successful. Your support helps us to continue providing valuable cybersecurity resources for free.</p>
+        <p>You will be redirected to the homepage in a few seconds.</p>
+        <a class="button" href="index.html">Go to Homepage</a>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 5000); // Redirects after 5 seconds
+    </script>
+</body>
+</html>
