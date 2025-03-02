@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Lakshan Sameer, a freelance cybersecurity engineer">
+    <meta name="author" content="Lakshan Sameer">
+    <meta name="keywords" content="cybersecurity, freelance, engineer, projects, portfolio">
+    <title>Lakshan Sameer — Cybersecurity Projects</title>
+
+    <style>
+      body {
+        background-color: #f6f6f6;
+        color: #222;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+      }
+
+      /* Header & Navigation */
+      header {
+        background: linear-gradient(to bottom, #e8e8e8, #d8d8d8);
+        border-bottom: 1px solid #aaa;
+        padding: 15px 20px;
+        position: relative;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .logo-img {
+        height: 60px;
+        margin-right: 15px;
+      }
+
+      .wiki-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .nav-tabs {
+        display: flex;
+        border-bottom: 1px solid #aaa;
+        background-color: #f0f0f0;
+        padding: 5px 10px 0;
+      }
+
+      .nav-tab {
+        padding: 5px 15px;
+        margin-right: 5px;
+        background-color: #e0e0e0;
+        border: 1px solid #aaa;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        font-size: 14px;
+        color: #0645ad;
+        text-decoration: none;
+      }
+
+      .nav-tab.active {
+        background-color: #fff;
+        border-bottom: 1px solid #fff;
+        position: relative;
+        top: 1px;
+      }
+
+      /* Main Content */
+      .main-container {
+        display: flex;
+        margin: 20px auto;
+        max-width: 1200px;
+      }
+
+      .sidebar {
+        width: 200px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        margin-right: 20px;
+        font-size: 14px;
+      }
+
+      .sidebar-section {
+        margin-bottom: 20px;
+      }
+
+      .sidebar-title {
+        padding: 5px;
+        background-color: #dddddd;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding-left: 15px;
+        margin: 0;
+      }
+
+      .sidebar li {
+        margin-bottom: 5px;
+      }
+
+      .sidebar li:before {
+        content: "• ";
+        color: #0645ad;
+      }
+
+      .sidebar a {
+        color: #0645ad;
+        text-decoration: none;
+      }
+
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+
+      .content {
+        flex: 1;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      .page-title {
+        font-size: 28px;
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+
+      .welcome-text {
+        color: #cc0000;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .intro-text {
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      /* Search Results */
+      .search-results {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .search-results h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      .search-results-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .search-result-item {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted #ddd;
+      }
+
+      .search-result-item:last-child {
+        border-bottom: none;
+      }
+
+      .search-result-title {
+        font-weight: bold;
+        color: #0645ad;
+        cursor: pointer;
+      }
+
+      .search-result-title:hover {
+        text-decoration: underline;
+      }
+
+      .search-result-snippet {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      /* Projects List */
+      .projects-section {
+        margin-top: 30px;
+      }
+
+      .section-heading {
+        font-size: 24px;
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+
+      .project {
+        margin-bottom: 25px;
+        border-left: 2px solid #0645ad;
+        padding-left: 15px;
+      }
+
+      .project-title {
+        font-size: 18px;
+        color: #0645ad;
+        margin-bottom: 10px;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+
+      .project-tag {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 2px 6px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        border-radius: 3px;
+      }
+
+      .project-description {
+        margin-bottom: 10px;
+      }
+
+      .project-link {
+        display: inline-block;
+        color: #0645ad;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .project-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Contents Box */
+      .contents-box {
+        float: right;
+        width: 300px;
+        background-color: #f8f8f8;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        margin: 0 0 20px 20px;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .contents-title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 5px;
+      }
+
+      .contents-list {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+
+      .contents-list li {
+        margin-bottom: 5px;
+      }
+
+      .contents-list a {
+        color: #0645ad;
+        text-decoration: none;
+      }
+
+      .contents-list a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-top: 1px solid #aaa;
+        font-size: 12px;
+        color: #666;
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Dark Mode Styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #bbbbbb;
+      }
+
+      body.dark-mode header {
+        background: linear-gradient(to bottom, #333, #222);
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .wiki-title {
+        color: #cc0000;
+      }
+
+      body.dark-mode .nav-tabs {
+        background-color: #222;
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .nav-tab {
+        background-color: #333;
+        border: 1px solid #444;
+        border-bottom: none;
+        color: #cc0000;
+      }
+
+      body.dark-mode .nav-tab.active {
+        background-color: #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+      }
+
+      body.dark-mode .sidebar {
+        background-color: #222;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .sidebar-title {
+        background-color: #333;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .sidebar a,
+      body.dark-mode .sidebar li:before {
+        color: #cc0000;
+      }
+
+      body.dark-mode .content {
+        background-color: #1a1a1a;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .page-title {
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .section-heading {
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .project {
+        border-left: 2px solid #cc0000;
+      }
+
+      body.dark-mode .project-title {
+        color: #cc0000;
+      }
+
+      body.dark-mode .project-tag {
+        background-color: #222;
+        border: 1px solid #333;
+      }
+
+      body.dark-mode .project-link {
+        color: #cc0000;
+      }
+
+      body.dark-mode .contents-box {
+        background-color: #222;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .contents-title {
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .contents-list a {
+        color: #cc0000;
+      }
+
+      body.dark-mode .search-results {
+        background-color: #222;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .search-results h3 {
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .search-result-item {
+        border-bottom: 1px dotted #444;
+      }
+
+      body.dark-mode .search-result-title {
+        color: #cc0000;
+      }
+
+      body.dark-mode .search-result-snippet {
+        color: #999;
+      }
+
+      body.dark-mode footer {
+        background-color: #222;
+        border-top: 1px solid #444;
+        color: #888;
+      }
+
+      body.dark-mode .dark-mode-toggle {
+        background-color: #cc0000;
+      }
+
+      
+      /* Add highlight animation for search results */
+      @keyframes highlightProject {
+        0% { background-color: rgba(204, 0, 0, 0.3); }
+        100% { background-color: transparent; }
+      }
+      
+      .project.highlighted {
+        animation: highlightProject 2s ease-out;
+      }
+
+       /* Mobile Responsiveness */
+       @media (max-width: 768px) {
+        .logo-area {
+          flex-direction: column; /* Stack logo and title vertically */
+          align-items: center; /* Center align items */
+          width: 100%;
+          margin-right: -60px;
+          overflow: hidden;
+          overflow-y: hidden;
+          overflow-x: hidden;
+          
+        }
+
+        .logo-img {
+          margin-bottom: 10px; /* Add space between logo and title */
+          width: 10%;
+          height: 10%;
+        }
+        .nav-tabs {
+          flex-wrap: wrap; /* Allow navigation tabs to wrap */
+          justify-content: center; /* Center align tabs */
+          padding-right: 20px;
+        }
+
+        .nav-tab {
+          margin-bottom: 5px; /* Add space between stacked tabs */
+        }
+
+        .wiki-title {
+          font-size: 28px;
+        }
+
+        .main-container {
+          flex-direction: column; /* Stack sidebar and content vertically */
+          padding: 0 1px; /* Add padding for better spacing */
+        }
+
+        .sidebar {
+          width: 90%; /* Full width for sidebar on mobile */
+          margin-right: 10px; /* Remove margin on mobile */
+          margin-bottom: 20px; /* Add space between sidebar and content */
+        }
+
+        .content {
+          width: auto; /* Full width for content on mobile */
+        }
+
+        .contents-box {
+          float: none; /* Remove float on mobile */
+          width: 100%; /* Full width for contents box on mobile */
+          margin: 20px 0; /* Add space around contents box */
+        }
+
+        .project-title {
+          font-size: 16px; /* Adjust font size for mobile */
+        }
+
+        .project-tags {
+          flex-direction: column; /* Stack tags vertically on mobile */
+        }
+
+        .project-tag {
+          margin-right: 0; /* Remove margin between tags */
+        }
+
+        .search-results {
+          width: 100%; /* Full width for search results on mobile */
+        }
+
+        .search-results h3 {
+          font-size: 18px; /* Adjust font size for mobile */
+        }
+
+        .search-result-title {
+          font-size: 16px; /* Adjust font size for mobile */
+        }
+
+        .search-result-snippet {
+          font-size: 14px; /* Adjust font size for mobile */
+        }
+     
+        .logo-area{
+          width: 100%;
+          overflow-x: hidden;
+          overflow-y: hidden;
+        }
+       
+      }
+    </style>
+  </head>
+
+  <body class="dark-mode">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Theme</button>
+    
+    <header>
+      <div class="logo-area">
+        <img src="assets/images/LOGO2.png" style="height: 8%; width: 8%; " alt="Logo" class="logo-img">
+        <div class="wiki-title">MY PROJECTS - SECURITY OPERATIONS | BLUE TEAMING | RED TEAMING
+
+        </div>
+      </div>
+      
+      <div class="nav-tabs">
+        <a href="projects.html" class="nav-tab active">My Projects</a>
+        <a href="about.html" class="nav-tab">About</a>
+        <a href="contact.html" class="nav-tab ">Contact</a>
+        <a href="https://tryhackme.com/p/lsam28" class="nav-tab">TryHackMe</a>
+        <a href="index.html" class="nav-tab">Main Page</a>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">My CERTIFICATIONS:</div>
+        </div>
+        <ul>
+          <li><a href="#">Google Professional Cybersecurity Certification</a></li>
+          <li><a href="#">IBM Cyber Security Analyst Professional Certification</a></li>
+          <li><a href="#">Security Blue Team Junior Analyst Program</a></li>
+          <li><a href="#">Fortinet NSE 1, NSE 2, and Fortinet FCP – FortiSIEM 6.3</a></li>
+          <li><a href="#">(ISC)² Systems Security Certified Practitioner (SSCP) – Specialization Certificate</a></li>
+          <li><a href="#">Kusto Detective Agency – Completed Parts 1-4, advanced KQL skills through data challenges.</a></li>
+        </ul>
+        <div class="sidebar-section">
+          <div class="sidebar-title">SEARCH HERE</div>
+          <div style="text-align: center; margin: 10px 0;">
+            <input type="text" id="searchInput" style="width: 90%; margin-bottom: 5px;" placeholder="Search projects...">
+            <button onclick="searchProjects()">Search</button>
+          </div>
+        </div>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">FOLLOW ME</div>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/lsam/">Linkedin</a></li>
+            <li><a href="https://medium.com/@lakshan.sam28">Medium</a></li>
+            <li><a href="https://github.com/Lsam18">Github</a></li>
+            <li><a href="https://twitter.com/itslsam?s=09">Twitter</a></li>
+            <li><a href="lakshan.sam28@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1 class="page-title">Projects</h1>
+        
+        <div class="welcome-text">Here's a Quick Look at My Hands-On Cybersecurity Projects</div>
+        
+        <div class="search-results" id="searchResults">
+          <h3>Search Results</h3>
+          <ul class="search-results-list" id="searchResultsList">
+            <!-- Search results will be inserted here by JavaScript -->
+          </ul>
+        </div>
+        
+        <div class="contents-box">
+          <div class="contents-title">Contents</div>
+          <ol class="contents-list">
+            <li><a href="#security-operations">1 Security Operations</a></li>
+            <li><a href="#digital-forensics">2 Digital Forensics</a></li>
+            <li><a href="#penetration-testing">3 Penetration Testing</a></li>
+            <li><a href="#application-development">4 Application Development</a></li>
+            <li><a href="#cloud-security">5 Cloud Security</a></li>
+            <li><a href="#professional-experience">6 Professional Experience</a></li>
+          </ol>
+        </div>
+        
+        <div class="intro-text">
+          This page showcases a collection of cybersecurity projects demonstrating expertise in security operations, blue teaming, red teaming, and general cybersecurity practices. Each project includes detailed information and links to full documentation.
+        </div>
+
+        <div class="projects-section" id="security-operations">
+          <h2 class="section-heading">1 Security Operations</h2>
+          
+          <div class="project">
+            <h3 class="project-title">OSSEC HIDS: Detecting the EternalBlue Exploitation</h3>
+            <div class="project-tags">
+              <span class="project-tag">SECURITY OPS</span>
+              <span class="project-tag">HIDS</span>
+              <span class="project-tag">ETERNALBLUE</span>
+            </div>
+            <p class="project-description">This project focused on using OSSEC HIDS (Host-Based Intrusion Detection System) to detect and respond to the well-known EternalBlue (MS17-010) vulnerability exploitation. The attack was simulated in a controlled lab environment, and OSSEC was configured to monitor, log, and generate alerts for suspicious activities related to the exploit.</p>
+            <a href="https://medium.com/@lakshan.sam28/unveiling-ossec-hids-detecting-the-eternalblue-exploitation-275c6a243904" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+          
+          <div class="project">
+            <h3 class="project-title">Network Intrusion Analysis and Detection for DevonCinema</h3>
+            <div class="project-tags">
+              <span class="project-tag">NETWORK SECURITY</span>
+              <span class="project-tag">WIRESHARK</span>
+              <span class="project-tag">SNORT</span>
+            </div>
+            <p class="project-description">This project analyzed a simulated cybersecurity incident targeting the DevonCinema network infrastructure. Using Wireshark and Snort, the investigation uncovered malicious activities, including unauthorized HTTP downloads, encrypted Command-and-Control (C2) communication, and lateral movement attempts.</p>
+            <a href="https://drive.google.com/file/d/1MTIOb-VboC4ix-D8asxCPMVTNjqlUy95/view?usp=share_link" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+        </div>
+
+        <div class="projects-section" id="digital-forensics">
+          <h2 class="section-heading">2 Digital Forensics</h2>
+          
+          <div class="project">
+            <h3 class="project-title">Comprehensive Digital Forensics Report for Cybersecurity Incident Response</h3>
+            <div class="project-tags">
+              <span class="project-tag">DIGITAL FORENSICS</span>
+              <span class="project-tag">INCIDENT RESPONSE</span>
+              <span class="project-tag">INVESTIGATION</span>
+            </div>
+            <p class="project-description">Conducted a digital forensic investigation to uncover unauthorized access to sensitive data. Activities included acquiring and analyzing digital evidence, investigating malicious activities, and delivering a detailed forensic report. Tools used include FTK Imager, Wireshark, Volatility, and Autopsy.</p>
+            <a href="https://drive.google.com/file/d/1s8JWNwQjh_jxCIxMu2s3t1l9ufVEIJWq/view?usp=share_link" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+        </div>
+
+        <div class="projects-section" id="penetration-testing">
+          <h2 class="section-heading">3 Penetration Testing</h2>
+          
+          <div class="project">
+            <h3 class="project-title">Penetration Testing Simulation for Securing Organizational Systems</h3>
+            <div class="project-tags">
+              <span class="project-tag">PENTEST</span>
+              <span class="project-tag">RED TEAM</span>
+              <span class="project-tag">VULN ASSESSMENT</span>
+            </div>
+            <p class="project-description">Conducted an in-depth penetration test and vulnerability assessment on a simulated organizational infrastructure using tools like OpenVAS, Nmap, Metasploit, and Armitage. Delivered a detailed report highlighting critical vulnerabilities, potential attack vectors, and actionable mitigation strategies.</p>
+            <a href="https://drive.google.com/file/d/1su0VYpCo_uA5Cqt72cM-U48rPjYZEWlj/view?usp=share_link" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+        </div>
+
+        <div class="projects-section" id="application-development">
+          <h2 class="section-heading">4 Application Development</h2>
+          
+          <div class="project">
+            <h3 class="project-title">Key Logger Application</h3>
+            <div class="project-tags">
+              <span class="project-tag">KEY LOGGER</span>
+              <span class="project-tag">MONITORING</span>
+              <span class="project-tag">AWARENESS</span>
+            </div>
+            <p class="project-description">Key Logger with Email Notification! This is a robust system that records keystrokes, monitors URLs visited in web browsers, takes periodic screenshots, and even retrieves location data depending on IP address. It's an effective tool for monitoring and raising cybersecurity awareness.</p>
+            <a href="https://medium.com/@lakshan.sam28/building-a-key-logger-with-email-notifications-a-comprehensive-guide-824e2137ad17" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+          
+          <div class="project">
+            <h3 class="project-title">A backdoor Reverse Shell - Remote Administration Tool (RAT)</h3>
+            <div class="project-tags">
+              <span class="project-tag">RAT</span>
+              <span class="project-tag">REVERSE SHELL</span>
+              <span class="project-tag">REMOTE ACCESS</span>
+            </div>
+            <p class="project-description">This tool allows remote control and monitoring, providing capabilities such as screen streaming, webcam snapshots, file transfer, and even retrieving location data. It's designed for ethical use in cybersecurity awareness and remote support scenarios.</p>
+            <a href="https://medium.com/@lakshan.sam28/developing-a-comprehensive-remote-access-tool-for-cybersecurity-and-remote-support-409cf925b8dd" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+          
+          <div class="project">
+            <h3 class="project-title">A File Integrity Monitor (FIM)</h3>
+            <div class="project-tags">
+              <span class="project-tag">FIM</span>
+              <span class="project-tag">POWERSHELL</span>
+              <span class="project-tag">MONITORING</span>
+            </div>
+            <p class="project-description">A File Integrity Monitor that allows users to track down real-time insights on file changes. Developed using PowerShell scripting. This tool helps you monitor the integrity of your files, safeguarding your digital assets against unauthorized changes.</p>
+            <a href="https://medium.com/@lakshan.sam28/building-a-file-integrity-monitoring-fim-system-for-enhanced-security-9e8a666de655" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+        </div>
+
+        <div class="projects-section" id="cloud-security">
+          <h2 class="section-heading">5 Cloud Security</h2>
+          
+          <div class="project">
+            <h3 class="project-title">Azure Sentinel (SIEM) Lab - Security Information and Event Management</h3>
+            <div class="project-tags">
+              <span class="project-tag">SIEM</span>
+              <span class="project-tag">AZURE</span>
+              <span class="project-tag">SENTINEL</span>
+            </div>
+            <p class="project-description">Security Information and Event Management (SIEM) - Sentinel-Lab. This innovative endeavor utilizes PowerShell scripting to detect failed RDP attacks by analyzing Windows Event Logs, seamlessly integrated with Azure Sentinel for real-time threat monitoring and visualization.</p>
+            <a href="https://github.com/Lsam18/SIEM-Sentinel-Lab.git" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+          
+          <div class="project">
+            <h3 class="project-title">Azure & OpenVAS Cybersecurity Vulnerability Management Project</h3>
+            <div class="project-tags">
+              <span class="project-tag">AZURE</span>
+              <span class="project-tag">OPENVAS</span>
+              <span class="project-tag">VULN MANAGEMENT</span>
+            </div>
+            <p class="project-description">Transforming Cybersecurity with Azure and OpenVAS: Empowering Secure Vulnerability Management. This project involved setting up a secure Azure network, creating a vulnerable Windows 10 VM, performing unauthenticated and credentialed scans, analyzing the results, and remediating identified vulnerabilities.</p>
+            <a href="https://medium.com/@lakshan.sam28/enhancing-security-through-vulnerability-management-48e19df63ac1" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+        </div>
+
+        <div class="projects-section" id="professional-experience">
+          <h2 class="section-heading">6 Professional Experience</h2>
+          
+          <div class="project">
+            <h3 class="project-title">Mastercard Cybersecurity virtual experience program on Forage - February 2025</h3>
+            <div class="project-tags">
+              <span class="project-tag">MASTERCARD</span>
+              <span class="project-tag">FORAGE</span>
+              <span class="project-tag">VIRTUAL EXPERIENCE</span>
+            </div>
+            <p class="project-description">As part of the Mastercard Cybersecurity Virtual Experience Program on Forage, I stepped into the role of a Cybersecurity Analyst on Mastercard's Security Awareness Team. This immersive simulation provided hands-on experience in threat identification, security awareness, and risk mitigation within a corporate environment.</p>
+            <a href="https://www.theforage.com/simulations/mastercard/cybersecurity-t8ye" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+          
+          <div class="project">
+            <h3 class="project-title">Tata Group Cybersecurity Analyst Virtual Experience – Forage</h3>
+            <div class="project-tags">
+              <span class="project-tag">TATA</span>
+              <span class="project-tag">IAM</span>
+              <span class="project-tag">ACCESS MANAGEMENT</span>
+            </div>
+            <p class="project-description">As part of the Tata Group's Cybersecurity Analyst Virtual Experience on Forage, I worked through real-world cybersecurity challenges, focusing on Identity and Access Management (IAM). This experience provided hands-on exposure to securing digital identities, managing access controls, and aligning security strategies with business objectives.</p>
+            <a href="https://www.theforage.com/simulations/tata/cybersecurity-sbda" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+          
+          <div class="project">
+            <h3 class="project-title">PwC Switzerland Cybersecurity Job Simulation on Forage - February 2025</h3>
+            <div class="project-tags">
+              <span class="project-tag">PWC</span>
+              <span class="project-tag">DIGITAL INTELLIGENCE</span>
+              <span class="project-tag">SIMULATION</span>
+            </div>
+            <p class="project-description">As part of the PwC Switzerland Cybersecurity Virtual Experience on Forage, I successfully completed a comprehensive job simulation focused on PwC Digital Intelligence. This hands-on experience provided valuable insights into cybersecurity strategies and practical applications in real-world scenarios.</p>
+            <a href="https://www.theforage.com/simulations/pwc-ch/cybersecurity-9iwh" target="_blank" class="project-link">>> VIEW FULL DETAILS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 LSAM28. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Toggle dark mode function
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+      
+      // Enhanced search function
+      function searchProjects() {
+        // Get search term and convert to lowercase for case-insensitive matching
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+        const searchResults = document.getElementById('searchResults');
+        const searchResultsList = document.getElementById('searchResultsList');
+        
+        // Clear previous search results
+        searchResultsList.innerHTML = '';
+        
+        // If search term is empty, hide search results and return
+        if (!searchTerm) {
+          searchResults.style.display = 'none';
+          return;
+        }
+        
+        // Get all projects
+        const projects = document.querySelectorAll('.project');
+        let resultsFound = false;
+        
+        // Remove any previous highlighting
+        document.querySelectorAll('.project.highlighted').forEach(p => {
+          p.classList.remove('highlighted');
+        });
+        
+        // Search through each project
+        projects.forEach(project => {
+          // Get project content to search through
+          const title = project.querySelector('.project-title').textContent.toLowerCase();
+          const description = project.querySelector('.project-description').textContent.toLowerCase();
+          const tags = Array.from(project.querySelectorAll('.project-tag'))
+            .map(tag => tag.textContent.toLowerCase());
+          
+          // Join all content to search through
+          const allContent = title + ' ' + description + ' ' + tags.join(' ');
+          
+          // Check if search term exists in any part of the project content
+          if (allContent.includes(searchTerm)) {
+            resultsFound = true;
+            
+            // Create a list item for the search result
+            const li = document.createElement('li');
+            li.className = 'search-result-item';
+            
+            // Create title element
+            const titleElement = document.createElement('div');
+            titleElement.className = 'search-result-title';
+            titleElement.textContent = project.querySelector('.project-title').textContent;
+            
+            // Create snippet element
+            const snippetElement = document.createElement('div');
+            snippetElement.className = 'search-result-snippet';
+            
+            // Create a snippet from the description
+            let snippet = project.querySelector('.project-description').textContent;
+            if (snippet.length > 150) {
+              snippet = snippet.substring(0, 150) + '...';
+            }
+            snippetElement.textContent = snippet;
+            
+            // Add click event to scroll to the project and highlight it
+            li.addEventListener('click', () => {
+              // Remove highlight from any previously highlighted project
+              document.querySelectorAll('.project.highlighted').forEach(p => {
+                p.classList.remove('highlighted');
+              });
+              
+              // Scroll to the project
+              project.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              
+              // Add highlighting class to the project
+              project.classList.add('highlighted');
+              
+              // After animation ends, remove the highlighting class
+              setTimeout(() => {
+                project.classList.remove('highlighted');
+              }, 2000);
+            });
+            
+           // Add elements to the list item
+           li.appendChild(titleElement);
+            li.appendChild(snippetElement);
+            
+            // Append the list item to the search results list
+            searchResultsList.appendChild(li);
+          }
+        });
+        
+        // Display or hide search results based on whether results were found
+        if (resultsFound) {
+          searchResults.style.display = 'block';
+        } else {
+          // If no results found, show a message
+          searchResults.style.display = 'block';
+          const li = document.createElement('li');
+          li.className = 'search-result-item';
+          li.textContent = 'No results found for "' + searchTerm + '"';
+          searchResultsList.appendChild(li);
+        }
+      }
+      
+      // Add event listener for search input (optional - allows search on pressing Enter)
+      document.getElementById('searchInput').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+          searchProjects();
+        }
+      });
+      </script> 

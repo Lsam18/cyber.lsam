@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Lakshan Sameer, a freelance cybersecurity engineer">
+    <meta name="author" content="Lakshan Sameer">
+    <meta name="keywords" content="cybersecurity, freelance, engineer, projects, portfolio">
+    <title>Lakshan Sameer — Contact</title>
+    <link href="assets/images/LOGO.png" rel="shortcut icon" type="image/png">
+    <style>
+      body {
+        background-color: #f6f6f6;
+        color: #222;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+      }
+
+      /* Header & Navigation */
+      header {
+        background: linear-gradient(to bottom, #e8e8e8, #d8d8d8);
+        border-bottom: 1px solid #aaa;
+        padding: 15px 20px;
+        position: relative;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .logo-img {
+        height: 60px;
+        margin-right: 15px;
+      }
+
+      .wiki-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .nav-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #aaa;
+        background-color: #f0f0f0;
+        padding: 5px 10px 0;
+      }
+
+      .nav-tab {
+        padding: 5px 15px;
+        margin-right: 5px;
+        background-color: #e0e0e0;
+        border: 1px solid #aaa;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        font-size: 14px;
+        color: #0645ad;
+        text-decoration: none;
+        margin-bottom: 5px;
+      }
+
+      .nav-tab.active {
+        background-color: #fff;
+        border-bottom: 1px solid #fff;
+        position: relative;
+        top: 1px;
+      }
+
+      /* Main Content */
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        max-width: 1200px;
+        padding: 0 20px;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .sidebar-section {
+        margin-bottom: 20px;
+      }
+
+      .sidebar-title {
+        padding: 5px;
+        background-color: #dddddd;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding-left: 15px;
+        margin: 0;
+      }
+
+      .sidebar li {
+        margin-bottom: 5px;
+      }
+
+      .sidebar li:before {
+        content: "• ";
+        color: #0645ad;
+      }
+
+      .sidebar a {
+        color: #0645ad;
+        text-decoration: none;
+      }
+
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+
+      .content {
+        flex: 1;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      .page-title {
+        font-size: 28px;
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+
+      .welcome-text {
+        color: #cc0000;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .intro-text {
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      /* Email Button */
+      .email-button {
+        display: block;
+        width: 100%;
+        background-color: #0645ad;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        text-align: center;
+      }
+
+      .email-button:hover {
+        background-color: #053a8f;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-top: 1px solid #aaa;
+        font-size: 12px;
+        color: #666;
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Dark Mode Styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #bbbbbb;
+      }
+
+      body.dark-mode header {
+        background: linear-gradient(to bottom, #333, #222);
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .wiki-title {
+        color: #cc0000;
+      }
+
+      body.dark-mode .nav-tabs {
+        background-color: #222;
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .nav-tab {
+        background-color: #333;
+        border: 1px solid #444;
+        border-bottom: none;
+        color: #cc0000;
+      }
+
+      body.dark-mode .nav-tab.active {
+        background-color: #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+      }
+
+      body.dark-mode .sidebar {
+        background-color: #222;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .sidebar-title {
+        background-color: #333;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .sidebar a,
+      body.dark-mode .sidebar li:before {
+        color: #cc0000;
+      }
+
+      body.dark-mode .content {
+        background-color: #1a1a1a;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .page-title {
+        border-bottom: 1px solid #444;
+      }
+
+      body.dark-mode .email-button {
+        background-color: #cc0000;
+      }
+
+      body.dark-mode .email-button:hover {
+        background-color: #a30000;
+      }
+
+      body.dark-mode footer {
+        background-color: #222;
+        border-top: 1px solid #444;
+        color: #888;
+      }
+
+      body.dark-mode .dark-mode-toggle {
+        background-color: #cc0000;
+      }
+
+      /* Media Queries for Mobile Responsiveness */
+      @media (min-width: 768px) {
+        .main-container {
+          flex-direction: row;
+        }
+
+        .sidebar {
+          width: 200px;
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+
+        .email-button {
+          display: inline-block;
+          width: auto;
+          margin-right: -30px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .logo-img {
+          height: 40px;
+        }
+
+        .wiki-title {
+          font-size: 20px;
+        }
+
+        .nav-tabs {
+          justify-content: center;
+        }
+
+        .nav-tab {
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+
+        .page-title {
+          font-size: 24px;
+        }
+
+        .welcome-text {
+          font-size: 16px;
+        }
+
+        .intro-text {
+          font-size: 14px;
+        }
+        .email-button {
+          display: inline-block;
+          width: auto;
+          margin-right: -30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="dark-mode">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Theme</button>
+    
+    <header>
+      <div class="logo-area">
+        <img src="assets/images/LOGO2.png" style="height: 8%; width: 8%;" alt="Logo" class="logo-img">
+        <div class="wiki-title">CONTACT ME - LSAM</div>
+      </div>
+      
+      <div class="nav-tabs">
+        <a href="projects.html" class="nav-tab">My Projects</a>
+        <a href="index.html" class="nav-tab">Main Page</a>
+        <a href="about.html" class="nav-tab">About</a>
+        <a href="contact.html" class="nav-tab active">Contact</a>
+        <a href="https://tryhackme.com/p/lsam28" class="nav-tab">TryHackMe</a>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">My CERTIFICATIONS:</div>
+        </div>
+        <ul>
+          <li><a href="#">Google Professional Cybersecurity Certification</a></li>
+          <li><a href="#">IBM Cyber Security Analyst Professional Certification</a></li>
+          <li><a href="#">Security Blue Team Junior Analyst Program</a></li>
+          <li><a href="#">Fortinet NSE 1, NSE 2, and Fortinet FCP – FortiSIEM 6.3</a></li>
+          <li><a href="#">(ISC)² Systems Security Certified Practitioner (SSCP) – Specialization Certificate</a></li>
+          <li><a href="#">Kusto Detective Agency – Completed Parts 1-4, advanced KQL skills through data challenges.</a></li>
+        </ul>
+        <div class="sidebar-section">
+          <div class="sidebar-title">FOLLOW ME</div>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/lsam/">Linkedin</a></li>
+            <li><a href="https://medium.com/@lakshan.sam28">Medium</a></li>
+            <li><a href="https://github.com/Lsam18">Github</a></li>
+            <li><a href="https://twitter.com/itslsam?s=09">Twitter</a></li>
+            <li><a href="mailto:lakshan.sam28@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1 class="page-title">Contact Me</h1>
+        
+        <div class="welcome-text">Feel free to reach out for collaborations, questions, or just to say hi!</div>
+        
+        <div class="intro-text">
+          If you have any inquiries, project ideas, or just want to connect, click the button below to send me an email.
+        </div>
+
+        <!-- Email Button -->
+        <a href="mailto:lakshan.sam28@gmail.com" class="email-button">Send Me an Email</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 LSAM28. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Toggle dark mode function
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+    </script>
+  </body>
+</html>
